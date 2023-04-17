@@ -16,6 +16,19 @@ function deleteDigit(/* n */) {
   // remove line with error and write your code here
 }
 
+function deleteDigit(n) {
+  let max = 0;
+
+  `${n}`.split('').forEach((item, index) => {
+      let bool = `${n}`.split('');
+      bool.splice(index, 1);
+
+      if (max <= +bool.join('')) max = +bool.join('');
+  });
+
+  return max;
+}
+
 module.exports = {
   deleteDigit
 };
